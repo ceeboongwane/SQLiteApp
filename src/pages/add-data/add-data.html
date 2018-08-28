@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Student</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="saveData()">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input [(ngModel)]="data.name" name="name" required=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Surname</ion-label>
+      <ion-input [(ngModel)]="data.lastName" name="lastName" required=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="data.gender" name="gender" required="">
+        <ion-option value="Male">Male</ion-option>
+        <ion-option value="Female">Female</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Student Number</ion-label>
+      <ion-input type="number" [(ngModel)]="data.studentNum" name="studentNum" required="" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Age</ion-label>
+      <ion-input type="number" [(ngModel)]="data.age" name="age" required="" ></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Save Data</button>
+  </form>
+</ion-content>
